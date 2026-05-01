@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-import pickle
+import joblib
 
 app = FastAPI()
 
 # Load model
-model = pickle.load(open("model/organic_rf_model.pkl", "rb"))
+model = joblib.load(open("model/organic_rf_model.pkl")
 
 class InputData(BaseModel):
     temperature: float
