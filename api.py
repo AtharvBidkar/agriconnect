@@ -5,7 +5,7 @@ import joblib
 app = FastAPI()
 
 # Load model
-model = joblib.load(open("model/organic_rf_model.pkl")
+model = joblib.load("model/organic_rf_model.pkl")
 
 class InputData(BaseModel):
     temperature: float
